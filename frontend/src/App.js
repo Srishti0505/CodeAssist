@@ -5,6 +5,8 @@ import Main from './components/main';
 import Login from './components/main/Login';
 import Signup from './components/main/Signup';
 import Home from './components/main/Home';
+import GenerateCode from './components/user/GenerateCode';
+import User from './components/user';
 
 function App() {
   return (
@@ -17,6 +19,10 @@ function App() {
             <Route path='home' element={<Home />} />
             <Route path='login' element={<Login />} />
             <Route path='signup' element={<Signup />} />
+          </Route>
+          <Route path='user' element={<User />} >
+
+            <Route path='generate' element={<GenerateCode />} />
           </Route>
           
           {/* <Route path='ManageUser' element={<ManageUser />} /> */}
