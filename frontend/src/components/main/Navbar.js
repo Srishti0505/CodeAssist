@@ -7,7 +7,7 @@ const Navbar = () => {
   {/* Navbar */}
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     {/* Container wrapper */}
-    <div className="container-fluid">
+    <div className="container">
       {/* Toggle button */}
       <button
         className="navbar-toggler"
@@ -25,8 +25,8 @@ const Navbar = () => {
         {/* Navbar brand */}
         <a className="navbar-brand mt-2 mt-lg-0" href="#">
           <img
-            src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-            height={15}
+            src="/logo192.png"
+            height={40}
             alt="MDB Logo"
             loading="lazy"
           />
@@ -34,7 +34,7 @@ const Navbar = () => {
         {/* Left links */}
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link" href="/home">
+            <a className="nav-link" href="/main/home">
               Home
             </a>
           </li>
@@ -44,7 +44,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/login">
+            <NavLink className="nav-link" to="/main/login">
               Login
             </NavLink>
           </li>
