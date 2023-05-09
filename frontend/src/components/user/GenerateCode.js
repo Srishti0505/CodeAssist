@@ -6,4 +6,4 @@ const GenerateCode = () => {
   )
 }
 
-export default GenerateCode
+export default GenerateCode;
