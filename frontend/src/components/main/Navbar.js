@@ -25,8 +25,8 @@ const Navbar = () => {
         {/* Navbar brand */}
         <a className="navbar-brand mt-2 mt-lg-0" href="#">
           <img
-            src="/logo192.png"
-            height={40}
+            src="/image.png"
+            height={70}
             alt="MDB Logo"
             loading="lazy"
           />
