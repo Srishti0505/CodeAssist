@@ -26,18 +26,18 @@ const Home = () => {
     <section className="fixed-width highlighted-bg">
       <h2>How it Works</h2>
       <div className="col fourth">
-        <h2>Increase Efficiency</h2>
+        <h2>Increase efficiency</h2>
         <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/197359/landingIcons_connect.svg"
+          src="/efficiency.png"
           alt=""
           className="landing-icon"
         />
         <p>It helps developers to write code faster and more efficiently by providing suggestions.</p>
       </div>
       <div className="col fourth">
-        <h2>Reduce Errors</h2>
+        <h2>Reduce  Errors</h2>
         <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/197359/landingIcons_learn.svg"
+          src="/reduceerror.png"
           alt=""
           className="landing-icon"
         />
@@ -55,7 +55,7 @@ const Home = () => {
       <div className="col fourth">
         <h2>Show Outputs</h2>
         <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/197359/landingIcons_nonprofits.svg"
+          src="/showoutput.png"
           alt=""
           className="landing-icon"
         />
