@@ -1,78 +1,35 @@
-import React, { useState } from 'react'
-import app_config from '../../config'
-const { Configuration, OpenAIApi } = require("openai");
-const { apiUrl, OPENAI_API_KEY} = app_config;
+import React, { useState } from 'react';
+import axios from 'axios';
 
 const GenerateCode = () => {
+  const [code, setCode] = useState('');
 
-  const configuration = new Configuration({
-    apiKey: OPENAI_API_KEY,
-  });
-
-  const openai = new OpenAIApi(configuration);
-  const [prompt, setPrompt] = useState("");
-  const [apiResponse, setApiResponse] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  const generateCode = async () => {
     try {
-      const result = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: prompt,
-        temperature: 0.5,
-        max_tokens: 4000,
+      const response = await axios.post('https://api.openai.com/v1/engines/davinci-codex/completions', {
+        prompt: 'Generate code to ',
+        max_tokens: 100,
+        temperature: 0.7,
+        n: 1,
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer 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',
+        },
       });
-      //console.log("response", result.data.choices[0].text);
-      setApiResponse(result.data.choices[0].text);
-    } catch (e) {
-      //console.log(e);
-      setApiResponse("Something is going wrong, Please try again.");
+
+      setCode(response.data.choices[0].text);
+    } catch (error) {
+      console.error('Error generating code:', error);
     }
-    setLoading(false);
   };
 
   return (
-    <>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: '100vh',
-        }}
-      >
-        <form onSubmit={handleSubmit}>
-          <textarea
-            type="text"
-            value={prompt}
-            placeholder="Please ask to openai"
-            onChange={(e) => setPrompt(e.target.value)}
-          ></textarea>
-          <button
-            disabled={loading || prompt.length === 0}
-            type="submit"
-          >
-            {loading ? "Generating..." : "Generate"}
-          </button>
-        </form>
-      </div>
-      {apiResponse && (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <pre>
-            <strong>API response:</strong>
-            {apiResponse}
-          </pre>
-        </div>
-      )}
-    </>
+    <div>
+      <button onClick={generateCode}>Generate Code</button>
+      <pre>{code}</pre>
+    </div>
   );
-}
+};
 
 export default GenerateCode;
