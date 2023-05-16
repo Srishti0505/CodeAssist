@@ -6,7 +6,7 @@ const GenerateCode = () => {
 
   const generateCode = async () => {
     try {
-      const response = await axios.post('https://api.openai.com/v1/engines/davinci-codex/completions', {
+      const response = await axios.post('https://api.openai.com/v1/chat/completions', {
         prompt: 'Generate code to ',
         max_tokens: 100,
         temperature: 0.7,
