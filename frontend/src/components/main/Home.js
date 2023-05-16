@@ -13,10 +13,10 @@ const Home = () => {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            height="600"
-            width="600"
+            height="0"
+            width="0"
             viewBox="0 323.8 2626.7 304.20002"
-            className="logo-medium"
+            className="logo-small"
           >
             <defs>
               <radialGradient
@@ -59,47 +59,11 @@ const Home = () => {
           {/* Logo end */}
         </a>
       </h1>
-      <nav className="top-navigation" role="navigation">
-        <ul className="inline-list padded-list">
-          <li>
-            <a href="#" className="icon ion-university">
-              Learn
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon ion-map">
-              Map
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon ion-chatbubbles">
-              Chat
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon ion-paper-airplane">
-              News
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon ion-edit">
-              Wiki
-            </a>
-          </li>
-          <li>
-            <a
-              href="#login"
-              className="icon ion-android-exit button button-red button-login toggle-hide"
-            >
-              Sign In
-            </a>
-          </li>
-        </ul>
-      </nav>
+      
     </div>
     <div className="header-image">
       <div className="header-image-text">
-        <h2 className="header-title">Code with Us</h2>
+        <h2 className="header-title">CodeAssist</h2>
         <p className="header-description">
           Let's learn to code by building projects for nonprofits
         </p>
@@ -116,50 +80,50 @@ const Home = () => {
     <section className="fixed-width highlighted-bg">
       <h2>How it Works</h2>
       <div className="col fourth">
-        <h3>Get Connected</h3>
+        <h2>Increase Efficiency</h2>
         <img
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/197359/landingIcons_connect.svg"
           alt=""
           className="landing-icon"
         />
-        <p>Join a community of busy, motivated people.</p>
+        <p>It helps developers to write code faster and more efficiently by providing suggestions.</p>
       </div>
       <div className="col fourth">
-        <h3>Learn JavaScript</h3>
+        <h2>Reduce Errors</h2>
         <img
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/197359/landingIcons_learn.svg"
           alt=""
           className="landing-icon"
         />
-        <p>Work together on Full Stack JavaScript coding challenges.</p>
+        <p>It can help to reduce errors and bugs by offering suggestions.</p>
       </div>
       <div className="col fourth">
-        <h3>Build your Portfolio</h3>
+        <h2>Enable Code</h2>
         <img
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/197359/landingIcons_portfolio.svg"
           alt=""
           className="landing-icon"
         />
-        <p>Build apps that solve real problems for real people.</p>
+        <p>It helps developers to write more reusable code and proving tools for managing dependicies.</p>
       </div>
       <div className="col fourth">
-        <h3>Help Nonprofits</h3>
+        <h2>Show Outputs</h2>
         <img
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/197359/landingIcons_nonprofits.svg"
           alt=""
           className="landing-icon"
         />
-        <p>Give nonprofits a boost by empowering them with code.</p>
+        <p>It will also show the output in the same page.</p>
       </div>
     </section>
     <section className="fixed-width">
       <h2>Skills You'll Learn</h2>
       <div className="col fourth highlighted-bg small-box">
-        <h3>HTML5</h3>
+        <h3>HTML</h3>
         <div className="icon icon-large ion-social-html5" />
       </div>
       <div className="col fourth highlighted-bg small-box">
-        <h3>CSS3</h3>
+        <h3>CSS</h3>
         <div className="icon icon-large ion-social-css3" />
       </div>
       <div className="col fourth highlighted-bg small-box">
@@ -170,10 +134,7 @@ const Home = () => {
         <h3>Databases</h3>
         <div className="icon icon-large ion-stats-bars" />
       </div>
-      <div className="col fourth highlighted-bg small-box">
-        <h3>Git</h3>
-        <div className="icon icon-large ion-social-github" />
-      </div>
+      
       <div className="col fourth highlighted-bg small-box">
         <h3>Node.js</h3>
         <div className="icon icon-large ion-social-nodejs" />
@@ -182,10 +143,7 @@ const Home = () => {
         <h3>Angular.js</h3>
         <div className="icon icon-large ion-social-angular" />
       </div>
-      <div className="col fourth highlighted-bg small-box">
-        <h3>Agile</h3>
-        <div className="icon icon-large ion-ios-loop-strong" />
-      </div>
+        
     </section>
     <section className="fixed-width highlighted-bg">
       <h2>Campers You'll Hang Out With</h2>
@@ -213,18 +171,7 @@ const Home = () => {
           <a href="https://twitter.com/TateThurston">@TateThurston</a>
         </p>
       </div>
-      <div className="col third">
-        <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/197359/testimonial-cynthia.jpg"
-          alt=""
-          className="landing-icon testimonial-avatar"
-        />
-        <p>
-          I'm currently working through Free Code Camp to improve my JavaScript.
-          The community is very welcoming! -{" "}
-          <a href="https://twitter.com/cynthialanel">@cynthialanel</a>
-        </p>
-      </div>
+      
     </section>
     <section className="fixed-width">
       <h2>Why you should join our open source community right now:</h2>

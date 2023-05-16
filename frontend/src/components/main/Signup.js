@@ -92,7 +92,7 @@ const signupform=useFormik({
                           value={signupform.values.cpassword}
                           onChange={signupform.handleChange}
                           className="form-control"
-                          placeholder="cPassword"
+                          placeholder="confirm password"
                         />
                         
                       </div>
