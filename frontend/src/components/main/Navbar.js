@@ -53,6 +53,11 @@ const Navbar = () => {
               Manage User
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/Contact us">
+              Contact us
+            </NavLink>
+          </li>
         </ul>
         {/* Left links */}
       </div>

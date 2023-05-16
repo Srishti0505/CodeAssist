@@ -1,87 +1,96 @@
-<>
-  <title>Contact Us Page</title>
-  <link rel="stylesheet" href="style2.css" />
-  <nav>
-    <a className="link" href="/index.html">
-      Home
-    </a>{" "}
-    |
-    <a className="link" href="/about-us.html">
-      About Us
-    </a>{" "}
-    |
-    <a className="link" href="/menu.html">
-      Menu
-    </a>{" "}
-    |
-    <a className="link" href="/locations.html/">
-      Locations
-    </a>{" "}
-    |
-    <a className="link" href="/gallery.html">
-      Gallery
-    </a>{" "}
-    |
-    <a className="link" href="/contact-us.html">
-      Contact Us
-    </a>{" "}
-    |
-    <a className="link" href="/reviews.html">
-      Reviews
-    </a>{" "}
-    |
-    <a className="link" href="/book-now.html">
-      Book Now
-    </a>
-  </nav>
-  <div className="contact-form">
-    <h1>Contact Us</h1>
-    <div className="txtb">
-      <label>Full Name:</label>
-      <input
-        type="text"
-        name=""
-        defaultValue=""
-        required=""
-        placeholder="Enter Your Name"
-      />
-    </div>
-    <br />
-    <div className="txtb">
-      <label>Email:</label>
-      <input
-        type="email"
-        name=""
-        defaultValue=""
-        required=""
-        placeholder="Enter Your Email"
-      />
-    </div>
-    <br />
-    <div className="txtb">
-      <label>Phone Number:</label>
-      <input
-        type="number"
-        name=""
-        defaultValue=""
-        required=""
-        placeholder="+90 XXX XXX XXXX"
-      />
-    </div>
-    <br />
-    <div className="txtb">
-      <label>Message :</label>
-      <textarea
-        rowSpan={2}
-        name=""
-        id=""
-        cols={30}
-        rows={10}
-        defaultValue={""}
-      />
-    </div>
-    <button name="submit" type="submit" value="submit" className="btn">
-      Submit
-    </button>
-  </div>
-</>
+import React from 'react';
+import './contact.css';
+
+const Contact = () => {
+  return (
+    <section className="contact_wrapper">
+      <div className="contact_info">
+        <h3 className="title">Contact Info</h3>
+        <ul className="icons_wrapp">
+          <li>
+            <div className="icon">
+              <span className="material-icons-outlined"> place </span>
+            </div>
+            <div className="text">
+              123 ABCDedf Road, 123 ABC, ABCD - 123456123 ABCDedf Road, 123 ABC,
+              ABCD - 123456
+            </div>
+          </li>
+          <li>
+            <div className="icon">
+              <span className="material-icons-outlined"> mail_outline </span>
+            </div>
+            <div className="text">ABCDedfRoad@ABCD.com</div>
+          </li>
+          <li>
+            <div className="icon">
+              <span className="material-icons-outlined"> phone_in_talk </span>
+            </div>
+            <div className="text">123-456-789</div>
+          </li>
+        </ul>
+        <ul className="soci_wrap">
+          <li>
+            <a href="#">
+              <span className="material-icons-outlined"> facebook </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span className="material-icons-outlined"> face </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span className="material-icons-outlined"> facebook </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span className="material-icons-outlined"> face </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="contact_msg">
+        <h3 className="title">Send a Message</h3>
+        <div className="form_fild">
+          <div className="input_group w_50">
+            <input type="text" className="input" required="" />
+            <label className="placeholder">First Name</label>
+          </div>
+          <div className="input_group w_50">
+            <input type="text" className="input" required="" />
+            <label className="placeholder">Last Name</label>
+          </div>
+          <div className="input_group w_50">
+            <input type="text" className="input" required="" />
+            <label className="placeholder">Emal Address</label>
+          </div>
+          <div className="input_group w_50">
+            <input type="tel" className="input" required="" />
+            <label className="placeholder">Mobile Number</label>
+          </div>
+          <div className="input_group w_100">
+            <textarea
+              className="input input_textarea "
+              rows={6}
+              required=""
+              defaultValue={""}
+            />
+            <label className="placeholder textarea">
+              Write your message here...
+            </label>
+          </div>
+          <div className="input_group">
+            <input type="submit" className="btn" defaultValue="Send" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  )
+}
+
+export default Contact

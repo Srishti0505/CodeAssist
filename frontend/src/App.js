@@ -7,6 +7,7 @@ import Signup from './components/main/Signup';
 import Home from './components/main/Home';
 import GenerateCode from './components/user/GenerateCode';
 import User from './components/user';
+import Contact from './components/main/contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path='home' element={<Home />} />
             <Route path='login' element={<Login />} />
             <Route path='signup' element={<Signup />} />
+            <Route path='contact' element={<Contact />} />
             
           </Route>
           <Route path='user' element={<User />} >
