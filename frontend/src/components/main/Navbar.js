@@ -58,6 +58,11 @@ const Navbar = () => {
               Contact us
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/main/Aboutus">
+              About Us
+            </NavLink>
+          </li>
         </ul>
         {/* Left links */}
       </div>

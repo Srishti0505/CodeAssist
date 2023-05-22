@@ -5,6 +5,7 @@ const Home = () => {
   return (
     
   <>
+  
   <header className="site-header" role="banner">
     
     <div className="header-image">
@@ -28,8 +29,7 @@ const Home = () => {
       <div className="col fourth">
         <h2>Increase efficiency</h2>
         <img
-          src="/efficiency.png"
-          alt=""
+          src="/efficiency.png"          alt=""
           className="landing-icon"
         />
         <p>It helps developers to write code faster and more efficiently by providing suggestions.</p>
