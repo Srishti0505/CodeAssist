@@ -30,17 +30,17 @@
 .head, .mid, .textarea, .end{
     padding: 15px;
 }
-img{
+/* img{
     height: 50px; width: 50px;
     cursor: pointer;
     background-color: rgba(233, 212, 97, 0.507);
     border-radius: 50%;
     transition: 0.1s linear;
-}
-img:hover{
+} */
+/* img:hover{
     background-color: gold;
     transform: scale(1.2);
-}
+} */
 .active{
   background-color: gold;
     transform: scale(1.2);

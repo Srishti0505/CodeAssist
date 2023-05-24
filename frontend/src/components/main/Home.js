@@ -1,13 +1,18 @@
-import React from 'react';
-import './Home.css';
+import React from "react";
+import "./Home.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { Pagination, Navigation } from "swiper";
 
 const Home = () => {
   return (
-
     <>
-
       <header className="site-header" role="banner">
-
         <div className="header-image">
           <div className="header-image-text">
             <h2 className="header-title">CodeAssist</h2>
@@ -28,37 +33,30 @@ const Home = () => {
           <h2>How it Works</h2>
           <div className="col fourth">
             <h2>Increase efficiency</h2>
-            <img
-              src="/efficiency.png" alt=""
-              className="landing-icon"
-            />
-            <p>It helps developers to write code faster and more efficiently by providing suggestions.</p>
+            <img src="/efficiency.png" alt="" className="landing-icon" />
+            <p>
+              It helps developers to write code faster and more efficiently by
+              providing suggestions.
+            </p>
           </div>
           <div className="col fourth">
-            <h2>Reduce  Errors</h2>
-            <img
-              src="/reduceerror.png"
-              alt=""
-              className="landing-icon"
-            />
-            <p>It can help to reduce errors and bugs by offering suggestions.</p>
+            <h2>Reduce Errors</h2>
+            <img src="/reduceerror.png" alt="" className="landing-icon" />
+            <p>
+              It can help to reduce errors and bugs by offering suggestions.
+            </p>
           </div>
           <div className="col fourth">
             <h2>Enable Code</h2>
-            <img
-              src="/coding.png"
-              alt=""
-              className="landing-icon"
-            />
-            <p>It helps developers to write more reusable code and proving tools for managing dependicies.</p>
+            <img src="/coding.png" alt="" className="landing-icon" />
+            <p>
+              It helps developers to write more reusable code and proving tools
+              for managing dependicies.
+            </p>
           </div>
           <div className="col fourth">
             <h2>Show Outputs</h2>
-            <img
-              src="/showoutput.png"
-              alt=""
-              className="landing-icon"
-            />
+            <img src="/showoutput.png" alt="" className="landing-icon" />
             <p>It will also show the output in the same page.</p>
           </div>
         </section>
@@ -89,11 +87,10 @@ const Home = () => {
             <h3>Angular.js</h3>
             <div className="icon icon-large ion-social-angular" />
           </div>
-
         </section>
         <section className="fixed-width highlighted-bg">
           <h2>Campers You'll Hang Out With</h2>
-          <div className='d-flex justify-content-center'>
+          <div className="d-flex justify-content-center">
             <div className="col third">
               <img
                 src="/image.png"
@@ -101,8 +98,8 @@ const Home = () => {
                 className="landing-icon testimonial-avatar"
               />
               <p>
-                Getting back on track with Free Code Camp and committing to a new
-                career in 2015! -{" "}
+                Getting back on track with Free Code Camp and committing to a
+                new career in 2015! -{" "}
                 <a href="https://twitter.com/jenbestyoga">@jenbestyoga</a>
               </p>
             </div>
@@ -113,13 +110,12 @@ const Home = () => {
                 className="landing-icon testimonial-avatar"
               />
               <p>
-                Just built my company's website with skills I've learned from Free
-                Code Camp! -{" "}
+                Just built my company's website with skills I've learned from
+                Free Code Camp! -{" "}
                 <a href="https://twitter.com/TateThurston">@TateThurston</a>
               </p>
             </div>
           </div>
-
         </section>
         <section className="fixed-width">
           <h2>Why you should join our open source community right now:</h2>
@@ -135,15 +131,16 @@ const Home = () => {
               phone.
             </li>
             <li className="icon ion-code">
-              You'll work through our focused, interactive courses and tutorials.
+              You'll work through our focused, interactive courses and
+              tutorials.
             </li>
             <li className="icon ion-code">
-              You'll learn state-of-the-art <strong>full stack JavaScript</strong>{" "}
-              technologies.
+              You'll learn state-of-the-art{" "}
+              <strong>full stack JavaScript</strong> technologies.
             </li>
             <li className="icon ion-code">
-              You'll build projects that help nonprofits carry out their missions
-              more effectively.
+              You'll build projects that help nonprofits carry out their
+              missions more effectively.
             </li>
             <li className="icon ion-code">
               You'll assemble a portfolio of real apps used by real people.
@@ -263,88 +260,39 @@ const Home = () => {
           <div className="row">
             <div className="col-md-8 col-center m-auto">
               <h3>Our Team Members</h3>
-              <div
-                id="myCarousel"
-                className="carousel slide"
-                data-ride="carousel"
+
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={30}
+                loop={true}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
               >
-                <ol className="carousel-indicators">
-                  <li
-                    data-target="#myCarousel"
-                    data-slide-to={0}
-                    className="active"
-                  />
-                  <li data-target="#myCarousel" data-slide-to={1} />
-                  <li data-target="#myCarousel" data-slide-to={2} />
-                </ol>
-                <a
-                  className="carousel-control left carousel-control-prev"
-                  href="#myCarousel"
-                  data-slide="prev"
-                >
-                  <i className="fa fa-angle-left" />
-                </a>
-                <a
-                  className="carousel-control right carousel-control-next"
-                  href="#myCarousel"
-                  data-slide="next"
-                >
-                  <i className="fa fa-angle-right" />
-                </a>
-              </div>
+                <SwiperSlide style={{  }}>
+                  <div className="">
+                      <img className="img-fluid" src="/image/11.jpg" alt="" />
+                      <h3>Title</h3>
+                      <p className="mb-3">Description</p>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide style={{  }}>
+                  <div className="">
+                      <img className="img-fluid" src="/image/ranu img.jpg" alt="" />
+                      <h3>Title</h3>
+                      <p className="mb-3">Description</p>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </div>
       </section>
-      <div className="carousel-inner">
-        <div className="item carousel-item active">
-          <div className="img-box">
-            <img
-              src="/image/11.jpg"
-
-            />
-          </div>
-          <p className="Our Team Member">
-            Srishti Srivastava
-          </p>
-
-        </div>
-        <div className="item carousel-item">
-          <div className="img-box">
-            <img
-              src="/image/ranu img.jpg"
-              alt=""
-            />
-          </div>
-          Ranu Singh
-          <p />
-          <p className="overview">
-            <b>David Jones</b>, Web Developer
-          </p>
-        </div>
-        <div className="item carousel-item">
-          <div className="img-box">
-            <img
-              src="https://i.imgur.com/lnwVigE.jpg"
-              alt="Mandy Hutzz's picture"
-            />
-          </div>
-          <p className="testimonial">
-            Thanks again for all you help. Everything was prefect. Even
-            my concern with only an hour between connecting flights
-            worked out ok, we walked off one plane and on to the next.
-            Please don't hesitate to recommend Orient travel to your
-            clients. This was our second trip with them and they are
-            true professionals. Thanks again. You always make us feel
-            safe in traveling..
-          </p>
-          <p className="overview">
-            <b>Mandy Hutzz</b>, Designer
-          </p>
-        </div>
-      </div>
     </>
-  )
-}
+  );
+};
 
 export default Home;
