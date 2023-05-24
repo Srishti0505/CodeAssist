@@ -1,12 +1,14 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const User = () => {
   return (
     <div>
-        <Outlet />
+      <Navbar />
+      <Outlet />
     </div>
-  )
-}
+  );
+};
 
-export default User
+export default User;
