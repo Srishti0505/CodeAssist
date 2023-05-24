@@ -48,11 +48,7 @@ const Navbar = () => {
               Login
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/ManageUser">
-              Manage User
-            </NavLink>
-          </li>
+         
           <li className="nav-item">
             <NavLink className="nav-link" to="/Contact us">
               Contact us

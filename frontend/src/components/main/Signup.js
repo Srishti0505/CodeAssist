@@ -111,6 +111,7 @@ const signupform=useFormik({
                     </div>
                     <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                       <button type="Submit" className="btn btn-primary btn-lg">
+                        
                         Register
                       </button>
                     </div>
