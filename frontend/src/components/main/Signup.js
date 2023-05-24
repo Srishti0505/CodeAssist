@@ -30,6 +30,7 @@ const Signup = () => {
       console.log(values);
       const response = await fetch("http://localhost:5000/user/add", {
         method: "POST",
+        body: JSON.stringify(values),
         headers: {
           "Content-Type": "application/json",
         },
@@ -92,9 +93,9 @@ const Signup = () => {
                         <div className="flex-fill mb-0">
                           <input
                             type="password"
-                            id="Password"
-                            value={signupform.values.Password}
-                            onchange={signupform.handleChange}
+                            id="password"
+                            value={signupform.values.password}
+                            onChange={signupform.handleChange}
                             className="form-control"
                             placeholder="Password"
                           />
