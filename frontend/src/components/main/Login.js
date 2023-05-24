@@ -43,26 +43,28 @@ const Login = () => {
     <div className="row d-flex align-items-center justify-content-center h-100">
       <div className="col-md-8 col-lg-7 col-xl-6">
         <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+          src="/login.gif"
           className="img-fluid"
           alt="Phone image"
+          style={{width:'100%'}}
         />
       </div>
       <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
         <form>
           {/* Email input */}
-          <div className="form-outline mb-4">
+          <div className=" mb-4">
             <input
               type="email"
               id="form1Example13"
               className="form-control form-control-lg"
+            
             />
             <label className="form-label" htmlFor="form1Example13">
               Email address
             </label>
           </div>
           {/* Password input */}
-          <div className="form-outline mb-4">
+          <div className="mb-4">
             <input
               type="password"
               id="form1Example23"
