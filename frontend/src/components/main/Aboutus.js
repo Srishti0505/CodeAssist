@@ -68,139 +68,126 @@ const Aboutus = () => {
           <div className="container"></div>
         </section>
 
-        <section className="banner"></section>
-        <section className="travelOptions">
-          <div className="album py-5 bg-light">
-            <div className="container">
-              <h3>About us</h3>
-              <p>
-                Coding for Beginners and non-technical background people. Coding
-                requires a lot of experience and time to learn. It cannot be
-                taught in one day, but with the help of AI one can learn coding
-                faster and program large application in lesser time. Our Project
-                is aimed to help students and developers for their coding tasks.
-                It will help programmers to solve their coding problems quickly.
-              </p>
-              <div className="row">
-                <div className="col-md-4">
-                  <div className="card mb-4 box-shadow">
-                    <img
-                      className="card-img-top"
-                      alt="Bangkok Picture"
-                      style={{ height: 225, width: "100%", display: "block" }}
-                      src="https://i.imgur.com/q2BxhmQ.jpg"
-                      data-holder-rendered="true"
-                    />
-                    <div className="card-body">
-                      <h6> Thailand - Two Weeks</h6>
-                      <p className="card-text">
-                        {" "}
-                        Two weeks is a short time to explore Thailand to the
-                        fullest. However this itinerary is crafted to give you a
-                        good grasp of the entire country while keeping the
-                        logistics as easy as possible.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <a
-                          href="thailand.html"
-                          role="button"
-                          className="btn btn-block btn-primary"
-                        >
-                          More Information
-                        </a>
-                      </div>
+    
+
+    return (
+        <>
+            <main>
+                <section className="travelOptions">
+                    <div className="album py-5 bg-light">
+                        <div className="container">
+                            <h3>About us</h3>
+                            <p>
+                                Coding for Beginners and non-technical background people.
+
+                                Coding requires a lot of experience and time to learn. It cannot be taught in one day, but with the help of AI one can learn coding faster and program large application in lesser time.
+
+                                Our Project is aimed to help students and developers for their coding tasks. It will help programmers to solve their coding problems quickly.
+                            </p>
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <div className="card mb-4 box-shadow">
+                                        <img
+                                            className="card-img-top"
+                                            alt="Bangkok Picture"
+                                            style={{ height: 225, width: "100%", display: "block" }}
+                                            src="/code gen gif.gif"
+                                            data-holder-rendered="true"
+                                        />
+                                        <div className="card-body">
+                                            <h6> GENERATE CODE</h6>
+                                            <p className="card-text">
+                                                {" "}
+                                                "CODE ASSIST " is a project aimed at providing assistance to developers in their coding task.
+                                            </p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-4">
+                                    <div className="card mb-4 box-shadow">
+                                        <img
+                                            className="card-img-top"
+                                            alt="Sydney Picture"
+                                            style={{ height: 225, width: "100%", display: "block" }}
+                                            src="/output gif.webp"
+                                            data-holder-rendered="true"
+                                        />
+                                        <div className="card-body">
+                                            <h6>OUTPUT</h6>
+                                            <p className="card-text">
+                                                {" "}
+                                                It provide the output on the same page.
+                                            </p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-4">
+                                    <div className="card mb-4 box-shadow">
+                                        <img
+                                            className="card-img-top"
+                                            alt="Koh Phi Phi Picture"
+                                            style={{ height: 225, width: "100%", display: "block" }}
+                                            src="/find error gif.gif"
+                                            data-holder-rendered="true"
+                                        />
+                                        <div className="card-body">
+                                            <h6>FIND ERRORS</h6>
+                                            <p className="card-text">
+                                                {" "}
+                                                The system will be able to analyse code syntax, error and bugs and also generate code  based on the requirements.{" "}
+                                            </p>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="card mb-4 box-shadow">
-                    <img
-                      className="card-img-top"
-                      alt="Sydney Picture"
-                      style={{ height: 225, width: "100%", display: "block" }}
-                      src="https://i.imgur.com/i2QFDZ5.jpg"
-                      data-holder-rendered="true"
-                    />
-                    <div className="card-body">
-                      <h6>Austalia - Three Weeks</h6>
-                      <p className="card-text">
-                        {" "}
-                        Australia is a vast country, nearly as big as the USA,
-                        so, this intinerary includes visiting Australia’s two
-                        best cities: Sydney and Melbourne, the Great Barrier
-                        Reef, the Outback and the Great Ocean Road.
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <a
-                          href="australia.html"
-                          role="button"
-                          className="btn btn-block btn-primary"
-                        >
-                          More Information
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="card mb-4 box-shadow">
-                    <img
-                      className="card-img-top"
-                      alt="Koh Phi Phi Picture"
-                      style={{ height: 225, width: "100%", display: "block" }}
-                      src="https://i.imgur.com/ch1BSld.jpg"
-                      data-holder-rendered="true"
-                    />
-                    <div className="card-body">
-                      <h6>Asia - Four Weeks</h6>
-                      <p className="card-text">
-                        {" "}
-                        This trip package includes visiting 4 countries in South
-                        Asia: Vietnam, Cambodia, Philippines and Thailand,
-                        spending roughly a week on each of them. Get ready to
-                        know the beauty of Asia.{" "}
-                      </p>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <a
-                          href="asia.html"
-                          role="button"
-                          className="btn btn-block btn-primary"
-                        >
-                          More Information
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="testimonials">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-8 col-center m-auto">
-                <h3>Our Team Members</h3>
-                <div
-                  id="myCarousel"
-                  className="carousel slide"
-                  data-ride="carousel"
-                >
-                  <ol className="carousel-indicators">
-                    <li
-                      data-target="#myCarousel"
-                      data-slide-to={0}
-                      className="active"
-                    />
-                    <li data-target="#myCarousel" data-slide-to={1} />
-                    <li data-target="#myCarousel" data-slide-to={2} />
-                  </ol>
-                  <div className="carousel-inner">
-                    <div className="item carousel-item active">
-                      <div className="img-box">
-                        <img src="/image/11.jpg" />
-                      </div>
-                      <p className="Our Team Member">Srishti Srivastava</p>
+                </section>
+                <section className="testimonials">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-8 col-center m-auto">
+                                <h3>Our Team Members</h3>
+                                <div
+                                    id="myCarousel"
+                                    className="carousel slide"
+                                    data-ride="carousel"
+                                >
+                                    <ol className="carousel-indicators">
+                                        <li
+                                            data-target="#myCarousel"
+                                            data-slide-to={0}
+                                            className="active"
+                                        />
+                                        <li data-target="#myCarousel" data-slide-to={1} />
+                                        <li data-target="#myCarousel" data-slide-to={2} />
+                                    </ol>
+                                    <a
+                                        className="carousel-control left carousel-control-prev"
+                                        href="#myCarousel"
+                                        data-slide="prev"
+                                    >
+                                        <i className="fa fa-angle-left" />
+                                    </a>
+                                    <a
+                                        className="carousel-control right carousel-control-next"
+                                        href="#myCarousel"
+                                        data-slide="next"
+                                    >
+                                        <i className="fa fa-angle-right" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="item carousel-item">
                       <div className="img-box">

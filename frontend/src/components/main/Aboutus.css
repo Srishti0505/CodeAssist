@@ -27,14 +27,14 @@ html, body, header {
       position: relative;
   }
   
-  .background .container {
+  .background .mycontainer {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
   }
   
-  .background .container h1 {
+  .background .mycontainer h1 {
       color: #FFF;
       font-size: 5em;
       line-height: 105%;
@@ -42,7 +42,7 @@ html, body, header {
       text-align: center;
   }
   
-  .background .container h2 {
+  .background .mycontainer h2 {
       color: #FFF;
       font-size: 3em;
       line-height: 105%;
@@ -385,7 +385,7 @@ html, body, header {
           rgba(0,0,0, .2),
           rgba(0,0,0,.3)),
           url('https://i.imgur.com/xbgyzRI.jpg');
-      height: 600px;
+      height: 300px;
       background-position: center center;
       background-repeat: no-repeat;
       -webkit-background-size: cover;

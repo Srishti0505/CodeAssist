@@ -63,6 +63,11 @@ const Navbar = () => {
               About Us
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/main/Feedback">
+              Feedback
+            </NavLink>
+          </li>
         </ul>
         {/* Left links */}
       </div>

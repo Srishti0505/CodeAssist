@@ -2,7 +2,7 @@ import React from 'react'
 
 const ManageProfile = () => {
   return (
-    <div>ManageProfile</div>
+    <div></div>
   )
 }
 
