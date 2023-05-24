@@ -37,9 +37,9 @@ const Signup = () => {
 
       console.log(response.status);
       Swal.fire({
-        icon : 'success',
-        title: 'Success',
-        text: 'Registered Successfully'
+        icon: "success",
+        title: "Success",
+        text: "Registered Successfully",
       });
       if (response.status === 200) navigate("/main/login");
     },

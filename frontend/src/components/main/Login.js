@@ -40,6 +40,8 @@ const Login = () => {
   return (
     <section className="vh-100">
   <div className="container py-5 h-100">
+  <div className="card text-black" style={{ borderRadius: 25 }}>
+            <div className="card-body p-md-5">
     <div className="row d-flex align-items-center justify-content-center h-100">
       <div className="col-md-8 col-lg-7 col-xl-6">
         <img
@@ -81,7 +83,9 @@ const Login = () => {
                 className="form-check-input"
                 type="checkbox"
                 defaultValue=""
-                id="form1Example3"
+                id="password"
+                onChange={loginForm.handleChange}
+                value={loginForm.values.password}
                 defaultChecked=""
               />
               <label className="form-check-label" htmlFor="form1Example3">
@@ -93,6 +97,8 @@ const Login = () => {
           </div>
           {/* Submit button */}
           <button type="submit" className="btn btn-primary btn-lg btn-block">
+            onchange={loginForm.handleChange}
+            value={loginForm.values.password}
             Sign in
           </button>
           <div className="divider d-flex align-items-center my-4">
