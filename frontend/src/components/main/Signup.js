@@ -110,10 +110,8 @@ const signupform=useFormik({
                       </label>
                     </div>
                     <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                      <button type="Submit" className="btn btn-primary btn-lg">
-                        
-                        Register
-                      </button>
+                      <button type="Submit" className="btn btn-primary btn-lg text-dark" style={{textAlign:'center', paddingTop:"5px"}}>Register</button>
+            
                     </div>
                   </form>
                 </div>
