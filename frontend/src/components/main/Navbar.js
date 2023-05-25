@@ -64,6 +64,11 @@ const Navbar = () => {
               Feedback
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/user/codegenerator">
+              Generate Code
+            </NavLink>
+          </li>
         </ul>
         {/* Left links */}
       </div>

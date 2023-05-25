@@ -87,10 +87,10 @@
 .textarea p{
     font-size: 18px;
 }
-textarea{
+.mytextarea{
     outline: none;
     resize: none;
-    height: 100px;
+    /* height: 100px; */
     border: 1.5px solid black;
     border-radius: 10px;
     padding: 5px;
@@ -100,7 +100,7 @@ textarea{
     justify-content: space-evenly;
     align-items: center;
 }
-.btn{
+.mybtn{
     width: 150px;
     height: 35px;
     border: 1px solid black;
