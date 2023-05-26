@@ -1,8 +1,16 @@
 import { useFormik } from "formik";
 import React from "react";
 import Swal from "sweetalert2";
+import { useUserContext } from "../../context/UserProvider";
+import app_config from "../../config";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+  const {setLoggedIn} = useUserContext();
+  const url = app_config.apiUrl;
+  const navigate = useNavigate();
+
   const loginForm = useFormik({
     initialValues: {
       email: "",
@@ -20,12 +28,22 @@ const Login = () => {
         }
       });
 
-      if (res.status == 200) {
+      if (res.status === 200) {
+        const data = (await res.json());
+        // console.log(data);
         Swal.fire({
           icon: "success",
           title: "Success",
           text: "Loged in Successfully"
-        })
+        });
+        setLoggedIn(true);
+        if (data.role === "admin") {
+          sessionStorage.setItem("admin", JSON.stringify(data));
+          navigate("/admin/dashboard");
+        } else {
+          sessionStorage.setItem("user", JSON.stringify(data));
+          navigate("/user/codegenerator");
+        }
       } else if (res.status === 401) {
         Swal.fire({
           icon: "error",
@@ -86,8 +104,7 @@ const Login = () => {
                         className="form-check-label"
                         htmlFor="form1Example3"
                       >
-                        {" "}
-                        Remember me{" "}
+                        Remember me
                       </label>
                     </div>
                     <a href="#!">Forgot password?</a>

@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 const AdminContext = createContext();
 
-const AdminProvider = ({ children, currentAdmin }) => {
+const AdminProvider = ({ children }) => {
+  const currentAdmin = JSON.parse(sessionStorage.getItem("admin"));
   const [loggedIn, setLoggedIn] = useState(currentAdmin !== null);
   const navigate = useNavigate();
 

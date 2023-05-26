@@ -11,11 +11,13 @@ import Aboutus from './components/main/Aboutus';
 import Feedback from './components/main/Feedback';
 import CodeGenerator from './components/user/CodeGenerator';
 import UserAuth from './auth/UserAuth';
+import UserProvider from './context/UserProvider';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+      <UserProvider>
         <Routes>
           <Route path="/" element={<Navigate to="/main/home" />} />
           <Route path="main" element={<Main />}>
@@ -30,6 +32,7 @@ function App() {
             <Route path="codegenerator" element={<CodeGenerator />} />
           </Route>
         </Routes>
+        </UserProvider>
       </BrowserRouter>
     </div>
   );
