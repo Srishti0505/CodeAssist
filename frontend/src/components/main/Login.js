@@ -12,20 +12,20 @@ const Login = () => {
     onSubmit: async (values) => {
       console.log(values);
 
-      const res = await fetch("http://localhost:5000/user/authenticate", {
-        method: "POST",
+      const res = await fetch('http://localhost:5000/user/authenticate', {
+        method: 'POST',
         body: JSON.stringify(values),
         headers: {
-          "Content-type": "application/json",
-        },
+          'Content-type': 'application/json'
+        }
       });
 
       if (res.status == 200) {
         Swal.fire({
           icon: "success",
           title: "Success",
-          text: "Loged in Successfully",
-        });
+          text: "Loged in Successfully"
+        })
       } else if (res.status === 401) {
         Swal.fire({
           icon: "error",
