@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 } */
+
+
+.mySwiper img{
+  height: 200px;
+  display: block;
+  margin: auto;
+  border-radius: 200px;
+}
+
+.mySwiper{
+  text-align: center;
+}
