@@ -12,6 +12,7 @@ import Feedback from './components/main/Feedback';
 import CodeGenerator from './components/user/CodeGenerator';
 import UserAuth from './auth/UserAuth';
 import UserProvider from './context/UserProvider';
+import UserProfile from './components/user/UserProfile';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           </Route>
           <Route path="user" element={ <UserAuth> <User /> </UserAuth> }>
             <Route path="codegenerator" element={<CodeGenerator />} />
+            <Route path="userprofile" element={<UserProfile />} />
           </Route>
         </Routes>
         </UserProvider>
