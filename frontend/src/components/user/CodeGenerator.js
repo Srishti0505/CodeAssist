@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import app_config from '../../config';
+import Swal from 'sweetalert2';
 
 const CodeGenerator = () => {
   const [prompt, setPrompt] = useState('');
   const { apiUrl } = app_config;
 
   const [responseLoading, setResponseLoading] = useState(false);
+
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
 
   const [generatedCode, setGeneratedCode] = useState('');
 
@@ -26,6 +29,27 @@ const CodeGenerator = () => {
     console.log(cssCode);
   };
 
+  const saveCode = async (code) => {
+    const response = await fetch(apiUrl + '/code/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        prompt: `generate html, css, and js code to ${prompt}`,
+        code: code,
+        user : currentUser._id,
+        createdAt: new Date()
+      })
+    });
+    const data = await response.json();
+    console.log(data);
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Code Saved Successfully',
+      showConfirmButton: false,
+    })
+  }
+
   const generateCode = async () => {
     setResponseLoading(true);
     const response = await fetch(apiUrl + '/code/generate', {
@@ -36,6 +60,7 @@ const CodeGenerator = () => {
       })
     });
     const data = await response.json();
+    saveCode(data);
     console.log(data);
     setResponseLoading(false);
     setGeneratedCode(data.code.content);

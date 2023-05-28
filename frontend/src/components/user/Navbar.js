@@ -58,6 +58,16 @@ const Navbar = () => {
               About Us
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/user/codegenerator">
+              Code Generator
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/user/generatedCodes">
+              Generate Codes
+            </NavLink>
+          </li>
         </ul>
         {/* Left links */}
       </div>

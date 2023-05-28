@@ -1,8 +1,8 @@
 const {Schema, model, Types} = require('../connection');
 
 const myschema = new Schema({
-    title : String,
-    file : String,
+    prompt : String,
+    code : String,
     user : {type : Types.ObjectId, ref : 'users'},
     createdAt: Date
 });
