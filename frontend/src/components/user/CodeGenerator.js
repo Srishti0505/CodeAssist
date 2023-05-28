@@ -5,19 +5,41 @@ const CodeGenerator = () => {
   const [prompt, setPrompt] = useState('');
   const { apiUrl } = app_config;
 
+  const [responseLoading, setResponseLoading] = useState(false);
+
   const [generatedCode, setGeneratedCode] = useState('');
 
+  const extractContentCode = (content) => {
+    const htmlRegex = /HTML code:(.*?)CSS code:/s;
+    const htmlMatches = content.match(htmlRegex);
+    const htmlCode = htmlMatches ? htmlMatches[1].trim() : '';
+    console.log(htmlMatches);
+    // Regular expression to extract CSS code
+    const cssRegex = /CSS code:(.*)/s;
+    const cssMatches = content.match(cssRegex);
+    const cssCode = cssMatches ? cssMatches[1].trim() : '';
+
+    console.log('HTML code:');
+    console.log(htmlCode);
+
+    console.log('CSS code:');
+    console.log(cssCode);
+  };
+
   const generateCode = async () => {
+    setResponseLoading(true);
     const response = await fetch(apiUrl + '/code/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        prompt: prompt
+        prompt: `generate html, css, and js code to ${prompt}`
       })
     });
     const data = await response.json();
     console.log(data);
+    setResponseLoading(false);
     setGeneratedCode(data.code.content);
+    extractContentCode(data.code.content);
   };
 
   return (
@@ -28,7 +50,7 @@ const CodeGenerator = () => {
             <div className="card" style={{ minHeight: '70vh' }}>
               <div className="card-header">Generated Code</div>
               <div className="card-body">
-                <textarea className="form-control" rows="20" value={generatedCode}></textarea>
+                <textarea className="form-control" rows="20" value={generatedCode} onChange={e => setGeneratedCode(e.target.value)}></textarea>
               </div>
             </div>
           </div>
@@ -45,7 +67,14 @@ const CodeGenerator = () => {
           <div className="card-body">
             <textarea onChange={(e) => setPrompt(e.target.value)} className="form-control" rows="4"></textarea>
             <button className="btn btn-primary mt-3" onClick={generateCode}>
-              Generate
+              {responseLoading ? (
+                <>
+                  <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  <span className="ml-2">Generating Code...</span>
+                </>
+              ) : (
+                'Generate'
+              )}
             </button>
           </div>
         </div>

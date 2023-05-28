@@ -229,7 +229,7 @@ html, body, header {
   /* Footer */
   
   footer {
-      height: 100px;
+      /* height: 100px; */
       background: url('https://imgur.com/gc1HjiF');
       position: relative;
   }
