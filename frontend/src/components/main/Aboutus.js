@@ -82,44 +82,7 @@ const Aboutus = () => {
             </div>
           </div>
         </section>
-        <section className="testimonials">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-8 col-center m-auto">
-                <h3>Our Team Members</h3>
-                <div
-                  id="myCarousel"
-                  className="carousel slide"
-                  data-ride="carousel"
-                >
-                  <ol className="carousel-indicators">
-                    <li
-                      data-target="#myCarousel"
-                      data-slide-to={0}
-                      className="active"
-                    />
-                    <li data-target="#myCarousel" data-slide-to={1} />
-                    <li data-target="#myCarousel" data-slide-to={2} />
-                  </ol>
-                  <a
-                    className="carousel-control left carousel-control-prev"
-                    href="#myCarousel"
-                    data-slide="prev"
-                  >
-                    <i className="fa fa-angle-left" />
-                  </a>
-                  <a
-                    className="carousel-control right carousel-control-next"
-                    href="#myCarousel"
-                    data-slide="next"
-                  >
-                    <i className="fa fa-angle-right" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
         <footer>
           <ul>
             <li>

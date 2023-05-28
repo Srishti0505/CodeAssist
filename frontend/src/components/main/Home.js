@@ -88,35 +88,7 @@ const Home = () => {
             <div className="icon icon-large ion-social-angular" />
           </div>
         </section>
-        <section className="fixed-width highlighted-bg">
-          <h2>Campers You'll Hang Out With</h2>
-          <div className="d-flex justify-content-center">
-            <div className="col third">
-              <img
-                src="/image.png"
-                alt=""
-                className="landing-icon testimonial-avatar"
-              />
-              <p>
-                Getting back on track with Free Code Camp and committing to a
-                new career in 2015! -{" "}
-                <a href="https://twitter.com/jenbestyoga">@jenbestyoga</a>
-              </p>
-            </div>
-            <div className="col third">
-              <img
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/197359/testimonial-tate.jpg"
-                alt=""
-                className="landing-icon testimonial-avatar"
-              />
-              <p>
-                Just built my company's website with skills I've learned from
-                Free Code Camp! -{" "}
-                <a href="https://twitter.com/TateThurston">@TateThurston</a>
-              </p>
-            </div>
-          </div>
-        </section>
+        
         <section className="fixed-width">
           <h2>Why you should join our open source community right now:</h2>
           <ul className="large-list">

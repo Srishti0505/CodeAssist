@@ -55,6 +55,9 @@ const Login = () => {
   });
 
   return (
+    
+
+    <section className="vh-100" style={{ backgroundColor: "#eee" }}>
     <section className="vh-100">
       <div className="container py-5 h-100">
         <div className="card text-black" style={{ borderRadius: 25 }}>
@@ -66,6 +69,7 @@ const Login = () => {
                   className="img-fluid"
                   alt="Phone image"
                   style={{ width: "100%" }}
+                
                 />
               </div>
               <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
@@ -145,6 +149,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+    </section>
     </section>
   );
 };
