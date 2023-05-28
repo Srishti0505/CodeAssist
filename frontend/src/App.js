@@ -10,11 +10,15 @@ import Contact from './components/main/contact1';
 import Aboutus from './components/main/Aboutus';
 import Feedback from './components/main/Feedback';
 import CodeGenerator from './components/user/CodeGenerator';
+import UserAuth from './auth/UserAuth';
+import UserProvider from './context/UserProvider';
+import UserProfile from './components/user/UserProfile';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+      <UserProvider>
         <Routes>
           <Route path="/" element={<Navigate to="/main/home" />} />
           <Route path="main" element={<Main />}>
@@ -25,10 +29,12 @@ function App() {
             <Route path="aboutus" element={<Aboutus />} />
             <Route path="Feedback" element={<Feedback />} />
           </Route>
-          <Route path="user" element={<User />}>
+          <Route path="user" element={ <UserAuth> <User /> </UserAuth> }>
             <Route path="codegenerator" element={<CodeGenerator />} />
+            <Route path="userprofile" element={<UserProfile />} />
           </Route>
         </Routes>
+        </UserProvider>
       </BrowserRouter>
     </div>
   );
