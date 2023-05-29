@@ -47,7 +47,7 @@ const Signup = () => {
   });
 
   return (
-    <section className="vh-100" style={{ backgroundColor: "#eee" }}>
+    <section className="vh-100" style={{ backgroundColor: "#eee", minHeight: '100vh' }}>
       <div className="container h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-lg-12 col-xl-11">
@@ -141,7 +141,7 @@ const Signup = () => {
                   </div>
                   <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
                     <img
-                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                      src="/signgif.gif"
                       className="img-fluid"
                       alt="Sample image"
                       style={{ width: "100%" }}

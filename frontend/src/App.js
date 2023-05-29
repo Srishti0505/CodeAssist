@@ -6,7 +6,7 @@ import Login from './components/main/Login';
 import Signup from './components/main/Signup';
 import Home from './components/main/Home';
 import User from './components/user';
-import Contact from './components/main/contact1';
+import Contact from './components/main/contact';
 import Aboutus from './components/main/Aboutus';
 import Feedback from './components/main/Feedback';
 import CodeGenerator from './components/user/CodeGenerator';

@@ -123,54 +123,9 @@ const Home = () => {
             Learn to code today (it's free!)
           </a>
         </section>
-        <section className="fixed-width">
-          <h2>As featured in</h2>
-          <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/197359/as-seen-on.png"
-            alt=""
-            className="featured-in-image"
-          />
-        </section>
+        
       </main>
-      <footer className="site-footer" role="contentinfo">
-        <ul className="inline-list">
-          <li>
-            <a href="" className="icon ion-speakerphone">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="" className="icon ion-social-github">
-              Github
-            </a>
-          </li>
-          <li>
-            <a href="" className="icon ion-social-twitch">
-              Twitch
-            </a>
-          </li>
-          <li>
-            <a href="" className="icon ion-social-linkedin">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="" className="icon ion-social-facebook">
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a href="" className="icon ion-social-twitter">
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a href="" className="icon ion-locked">
-              Privacy
-            </a>
-          </li>
-        </ul>
-      </footer>
+     
       {/* Login */}
       <div id="modal-bg" className="login-modal-bg toggle-hide" />
       <div id="login" className="login-container">
@@ -247,14 +202,14 @@ const Home = () => {
                 <SwiperSlide style={{  }}>
                   <div className="">
                       <img className="img-fluid" src="/image/11.jpg" alt="" />
-                      <h3>Title</h3>
+                      <h3>Srishti Srivastava</h3>
                       <p className="mb-3">Description</p>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide style={{  }}>
                   <div className="">
                       <img className="img-fluid" src="/image/ranu img.jpg" alt="" />
-                      <h3>Title</h3>
+                      <h3>Ranu Singh</h3>
                       <p className="mb-3">Description</p>
                   </div>
                 </SwiperSlide>

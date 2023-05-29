@@ -61,7 +61,7 @@ const Login = () => {
             <div className="card-body p-md-5">
               <div className="row d-flex align-items-center justify-content-center h-100">
                 <div className="col-md-8 col-lg-7 col-xl-6">
-                  <img src="/login.gif" className="img-fluid" alt="Phone image" style={{ width: '100%' }} />
+                  <img src="/giphy.gif" className="img-fluid" alt="Phone image" style={{ width: '100%' }} />
                 </div>
                 <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                   <form onSubmit={loginForm.handleSubmit}>
