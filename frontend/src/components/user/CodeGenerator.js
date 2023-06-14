@@ -60,7 +60,7 @@ const CodeGenerator = () => {
       })
     });
     const data = await response.json();
-    saveCode(data);
+    // saveCode(data);
     console.log(data);
     setResponseLoading(false);
     setGeneratedCode(data.code.content);
