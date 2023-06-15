@@ -83,25 +83,7 @@ const Aboutus = () => {
           </div>
         </section>
         
-        <footer>
-          <ul>
-            <li>
-              <a href="http://www.facebook.com" alt="Facebook Page">
-                <i className="fab fa-facebook" />
-              </a>
-            </li>
-            <li>
-              <a href="http://www.twitter.com" alt="Twitter Page">
-                <i className="fab fa-twitter" />
-              </a>
-            </li>
-            <li>
-              <a href="http://www.instagram.com" alt="Instagram Page">
-                <i className="fab fa-instagram" />
-              </a>
-            </li>
-          </ul>
-        </footer>
+        
       </main>
     </>
   );
