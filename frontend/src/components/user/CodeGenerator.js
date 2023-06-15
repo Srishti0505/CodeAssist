@@ -13,12 +13,12 @@ const CodeGenerator = () => {
   const [generatedCode, setGeneratedCode] = useState('');
 
   const extractContentCode = (content) => {
-    const htmlRegex = /HTML code:(.*?)CSS code:/s;
+    const htmlRegex = /HTML Structure:(.*?)CSS Structure:/s;
     const htmlMatches = content.match(htmlRegex);
     const htmlCode = htmlMatches ? htmlMatches[1].trim() : '';
     console.log(htmlMatches);
     // Regular expression to extract CSS code
-    const cssRegex = /CSS code:(.*)/s;
+    const cssRegex = /CSS Structure:(.*)/s;
     const cssMatches = content.match(cssRegex);
     const cssCode = cssMatches ? cssMatches[1].trim() : '';
 
