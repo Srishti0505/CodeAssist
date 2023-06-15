@@ -12,21 +12,39 @@ const CodeGenerator = () => {
 
   const [generatedCode, setGeneratedCode] = useState('');
 
+  const [generatedHTML, setGeneratedHTML] = useState('');
+
   const extractContentCode = (content) => {
-    const htmlRegex = /HTML Structure:(.*?)CSS Structure:/s;
-    const htmlMatches = content.match(htmlRegex);
-    const htmlCode = htmlMatches ? htmlMatches[1].trim() : '';
-    console.log(htmlMatches);
-    // Regular expression to extract CSS code
-    const cssRegex = /CSS Structure:(.*)/s;
-    const cssMatches = content.match(cssRegex);
-    const cssCode = cssMatches ? cssMatches[1].trim() : '';
+    const htmlRegex = /<!DOCTYPE html>([\s\S]*?)<\/html>/i;
+    const htmlMatchesCode = content.match(htmlRegex);
+    console.log(htmlMatchesCode);
+    if (htmlMatchesCode) {
+      console.log('code works');
+      const htmlCode = '<!DOCTYPE html>\n' + (htmlMatchesCode ? htmlMatchesCode[1].trim() : '') + '\n</html>';
+      // Regular expression to extract CSS code
+      const cssRegex = /body\s*{([\s\S]*?)\}```/i;
+      const cssMatches = content.match(cssRegex);
+      const cssCode = cssMatches ? cssMatches[1].trim() : '';
+      console.log(htmlCode);
+      setGeneratedHTML(htmlCode);
+      console.log(cssCode);
+      return { htmlCode, cssCode };
+    }
 
-    console.log('HTML code:');
-    console.log(htmlCode);
-
-    console.log('CSS code:');
-    console.log(cssCode);
+    // const htmlRegex2 = /HTML Structure:(.*?)CSS Structure:/s;
+    // const htmlMatchesStructure = content.match(htmlRegex2);
+    // console.log(htmlMatchesStructure);
+    // if (htmlMatchesStructure) {
+    //   console.log('structure works');
+    //   const htmlCode = htmlMatchesStructure ? htmlMatchesStructure[1].trim() : '';
+    //   // Regular expression to extract CSS code
+    //   const cssRegex = /CSS Structure:(.*)/s;
+    //   const cssMatches = content.match(cssRegex);
+    //   const cssCode = cssMatches ? cssMatches[1].trim() : '';
+    //   console.log(htmlCode);
+    //   console.log(cssCode);
+    //   return { htmlCode, cssCode };
+    // }
   };
 
   const saveCode = async (code) => {
@@ -34,9 +52,9 @@ const CodeGenerator = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        prompt: `generate html, css, and js code to ${prompt}`,
+        prompt: `generate html, css, and js code for ${prompt}`,
         code: code,
-        user : currentUser._id,
+        user: currentUser._id,
         createdAt: new Date()
       })
     });
@@ -46,25 +64,37 @@ const CodeGenerator = () => {
     Swal.fire({
       icon: 'success',
       title: 'Code Saved Successfully',
-      showConfirmButton: false,
-    })
-  }
+      showConfirmButton: false
+    });
+  };
 
   const generateCode = async () => {
+    saveCode('sdsdsd');
+    return;
     setResponseLoading(true);
     const response = await fetch(apiUrl + '/code/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        prompt: `generate html, css, and js code to ${prompt}`
+        prompt: `generate html, css, and js code to ${prompt}, styling should be included in html code`
       })
     });
-    const data = await response.json();
-    // saveCode(data);
-    console.log(data);
-    setResponseLoading(false);
-    setGeneratedCode(data.code.content);
-    extractContentCode(data.code.content);
+    console.log(response.status);
+    if(response.status === 200){
+      const data = await response.json();
+      // saveCode(data);
+      console.log(data);
+      setResponseLoading(false);
+      setGeneratedCode(data.code.content);
+      extractContentCode(data.code.content);
+    }else{
+      setResponseLoading(false);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong! Please try again later.'
+      });
+    }
   };
 
   return (
@@ -75,14 +105,14 @@ const CodeGenerator = () => {
             <div className="card" style={{ minHeight: '70vh' }}>
               <div className="card-header">Generated Code</div>
               <div className="card-body">
-                <textarea className="form-control" rows="20" value={generatedCode} onChange={e => setGeneratedCode(e.target.value)}></textarea>
+                <textarea className="form-control" rows="20" value={generatedCode} onChange={(e) => setGeneratedCode(e.target.value)}></textarea>
               </div>
             </div>
           </div>
           <div className="col-md-6">
             <div className="card" style={{ minHeight: '100%' }}>
               <div className="card-header">Output</div>
-              <div className="card-body">{generatedCode && <iframe srcDoc={generatedCode} style={{ width: '100%', height: '70vh' }}></iframe>}</div>
+              <div className="card-body">{generatedCode && <iframe srcDoc={generatedHTML} style={{ width: '100%', height: '70vh' }}></iframe>}</div>
             </div>
           </div>
         </div>
