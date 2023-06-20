@@ -48,3 +48,8 @@
 .mySwiper{
   text-align: center;
 }
+
+.full-page{
+  background-size: cover;
+  background-position: center;
+}

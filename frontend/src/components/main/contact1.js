@@ -65,7 +65,7 @@ const contact1 = () => {
             </div>
             <div className="input_group w_50">
               <input type="text" className="input" required="" />
-              <label className="placeholder">Emal Address</label>
+              <label className="placeholder">Email Address</label>
             </div>
             <div className="input_group w_50">
               <input type="tel" className="input" required="" />

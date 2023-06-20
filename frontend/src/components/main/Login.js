@@ -54,11 +54,11 @@ const Login = () => {
   });
 
   return (
-    <section className="vh-100" style={{ backgroundColor: '#eee', minHeight: '100vh' }}>
+    <section className="vh-100 full-page" style={{ backgroundImage: `url('/image/LOGIN.webp')`, minHeight: '100vh' }}>
       <section className="vh-100">
         <div className="container py-5 h-100">
           <div className="card text-black" style={{ borderRadius: 25 }}>
-            <div className="card-body p-md-5">
+            <div className="card-body p-md-7">
               <div className="row d-flex align-items-center justify-content-center h-100">
                 <div className="col-md-8 col-lg-7 col-xl-6">
                   <img src="/giphy.gif" className="img-fluid" alt="Phone image" style={{ width: '100%' }} />

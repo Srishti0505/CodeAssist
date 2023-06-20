@@ -1,7 +1,31 @@
 import React from 'react'
 import './Feedback.css';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const Feedback = () => {
+
+  const navigate = useNavigate();
+
+  const addFeedback = async (values) => {
+    console.log(values);
+    const response = await fetch("http://localhost:5000/user/add", {
+      method: "POST",
+      body: JSON.stringify(values),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    console.log(response.status);
+    Swal.fire({
+      icon: "success",
+      title: "Success",
+      text: "Registered Successfully",
+    });
+    if (response.status === 200) navigate("/main/login");
+  }
+
   return (
     <div>
       <div className="content">
@@ -63,7 +87,7 @@ const Feedback = () => {
           </div>
           <div className="end">
             <div className="submission">
-              <button className="sub btn">Send</button>
+              <button className="sub btn" onClick={addFeedback}>Send</button>
             </div>
             <div className="skip">
               <button className="skp btn">Skip</button>
