@@ -69,8 +69,8 @@ const CodeGenerator = () => {
   };
 
   const generateCode = async () => {
-    saveCode('sdsdsd');
-    return;
+    // saveCode('sdsdsd');
+    // return;
     setResponseLoading(true);
     const response = await fetch(apiUrl + '/code/generate', {
       method: 'POST',
