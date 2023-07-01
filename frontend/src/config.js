@@ -1,6 +1,6 @@
 const app_config = {
     apiUrl : "http://localhost:5000",
-    OPENAI_API_KEY : "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"
+    OPENAI_API_KEY : "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"
 }
 
 export default app_config;
