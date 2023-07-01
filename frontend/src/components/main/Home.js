@@ -18,7 +18,7 @@ const Home = () => {
             <h2 className="header-title">CodeAssist</h2>
             <p className="header-description">
               Let's learn to code by building projects for nonprofits
-            </p>
+            </p> 
             <a className="button button-yellow" href="#">
               Start learning to code (it's free!)
             </a>
